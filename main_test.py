@@ -120,41 +120,42 @@ def fallback_by_embedding(word):
 def get_counter_for(word):
     word = normalize_word(word)
 
-      # 0. Specific Manual Counter Overrides (highest priority)
+    # 0. Specific Manual Counter Overrides (highest priority)
     if word in specific_counters:
         counter = specific_counters[word]
         print(f"[Specific Override] '{word}' manually set to counter '{counter}'")
         return counter, word_data.get(counter, 999)
-    
-    
+
     # 1. Manual Mapping
     if word in input_word_map:
         cat = input_word_map[word]
         for w in word_bank:
             if "categories" in w and cat in w["categories"]:
-                print(f"[Manual] '{word}' → {w['word']}")
+                print(f"[Manual] '{word}' → {w['word']}'")
                 return w["word"], w["cost"]
 
-   # 2. WordNet
+    # 2. WordNet
     cat = get_category_from_wordnet(word)
     if cat:
         print(f"[WordNet] '{word}' → category '{cat}'")
 
-    # Get all candidate words in the same category
-    candidates = [w for w in word_bank if w.get("category") == cat]
-    if candidates:
-        emb_input = model.encode(word, convert_to_tensor=True)
-        emb_candidates = model.encode([w["word"] for w in candidates], convert_to_tensor=True)
-        sims = util.cos_sim(emb_input, emb_candidates)[0]
-        best_idx = torch.argmax(sims).item()
-        best_word = candidates[best_idx]["word"]
-        best_cost = candidates[best_idx]["cost"]
-        print(f"[Smart WordNet+KNN] Best semantic match in category '{cat}' → {best_word} (${best_cost})")
-        return best_word, best_cost
+        # Try semantic matching within the category
+        candidates = [w for w in word_bank if w.get("category") == cat]
+        if candidates:
+            emb_input = model.encode(word, convert_to_tensor=True)
+            emb_candidates = model.encode([w["word"] for w in candidates], convert_to_tensor=True)
+            sims = util.cos_sim(emb_input, emb_candidates)[0]
+            best_idx = torch.argmax(sims).item()
+            best_word = candidates[best_idx]["word"]
+            best_cost = candidates[best_idx]["cost"]
+            print(f"[Smart WordNet+KNN] Best semantic match in category '{cat}' → {best_word} (${best_cost})")
+            return best_word, best_cost
 
-    # Fallback to the standard mapping
-    counter = category_map[cat]
-    return counter, word_data.get(counter, 999)
+        # If category is known but no semantic match, fallback to default counter from map
+        if cat in category_map:
+            counter = category_map[cat]
+            print(f"[WordNet Mapping] No good match, fallback to counter → {counter}")
+            return counter, word_data.get(counter, 999)
 
     # 3. Embedding fallback for weapon
     guess, cost = fallback_by_embedding(word)
@@ -165,7 +166,7 @@ def get_counter_for(word):
     predicted_cat = classify_with_knn(word)
     for w in word_bank:
         if w.get("category") == predicted_cat:
-            print(f"[KNN] '{word}' → {w['word']}")
+            print(f"[KNN] '{word}' → {w['word']}'")
             return w["word"], w["cost"]
 
     # 5. Default
