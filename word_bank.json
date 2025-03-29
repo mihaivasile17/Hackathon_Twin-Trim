@@ -1,0 +1,242 @@
+[
+  {
+    "word": "Feather",
+    "cost": 1
+  },
+  {
+    "word": "Coal",
+    "cost": 1
+  },
+  {
+    "word": "Pebble",
+    "cost": 1
+  },
+  {
+    "word": "Leaf",
+    "cost": 2
+  },
+  {
+    "word": "Paper",
+    "cost": 2
+  },
+  {
+    "word": "Rock",
+    "cost": 2
+  },
+  {
+    "word": "Water",
+    "cost": 3
+  },
+  {
+    "word": "Twig",
+    "cost": 3
+  },
+  {
+    "word": "Sword",
+    "cost": 4
+  },
+  {
+    "word": "Shield",
+    "cost": 4
+  },
+  {
+    "word": "Gun",
+    "cost": 5
+  },
+  {
+    "word": "Flame",
+    "cost": 5
+  },
+  {
+    "word": "Rope",
+    "cost": 5
+  },
+  {
+    "word": "Disease",
+    "cost": 6
+  },
+  {
+    "word": "Cure",
+    "cost": 6
+  },
+  {
+    "word": "Bacteria",
+    "cost": 6
+  },
+  {
+    "word": "Shadow",
+    "cost": 7
+  },
+  {
+    "word": "Light",
+    "cost": 7
+  },
+  {
+    "word": "Virus",
+    "cost": 7
+  },
+  {
+    "word": "Sound",
+    "cost": 8
+  },
+  {
+    "word": "Time",
+    "cost": 8
+  },
+  {
+    "word": "Fate",
+    "cost": 8
+  },
+  {
+    "word": "Earthquake",
+    "cost": 9
+  },
+  {
+    "word": "Storm",
+    "cost": 9
+  },
+  {
+    "word": "Vaccine",
+    "cost": 9
+  },
+  {
+    "word": "Logic",
+    "cost": 10
+  },
+  {
+    "word": "Gravity",
+    "cost": 10
+  },
+  {
+    "word": "Robots",
+    "cost": 10
+  },
+  {
+    "word": "Stone",
+    "cost": 11
+  },
+  {
+    "word": "Echo",
+    "cost": 11
+  },
+  {
+    "word": "Thunder",
+    "cost": 12
+  },
+  {
+    "word": "Karma",
+    "cost": 12
+  },
+  {
+    "word": "Wind",
+    "cost": 13
+  },
+  {
+    "word": "Ice",
+    "cost": 13
+  },
+  {
+    "word": "Sandstorm",
+    "cost": 13
+  },
+  {
+    "word": "Laser",
+    "cost": 14
+  },
+  {
+    "word": "Magma",
+    "cost": 14
+  },
+  {
+    "word": "Peace",
+    "cost": 14
+  },
+  {
+    "word": "Explosion",
+    "cost": 15
+  },
+  {
+    "word": "War",
+    "cost": 15
+  },
+  {
+    "word": "Enlightenment",
+    "cost": 15
+  },
+  {
+    "word": "Nuclear Bomb",
+    "cost": 16
+  },
+  {
+    "word": "Volcano",
+    "cost": 16
+  },
+  {
+    "word": "Whale",
+    "cost": 17
+  },
+  {
+    "word": "Earth",
+    "cost": 17
+  },
+  {
+    "word": "Moon",
+    "cost": 17
+  },
+  {
+    "word": "Star",
+    "cost": 18
+  },
+  {
+    "word": "Tsunami",
+    "cost": 18
+  },
+  {
+    "word": "Supernova",
+    "cost": 19
+  },
+  {
+    "word": "Antimatter",
+    "cost": 19
+  },
+  {
+    "word": "Plague",
+    "cost": 20
+  },
+  {
+    "word": "Rebirth",
+    "cost": 20
+  },
+  {
+    "word": "Tectonic Shift",
+    "cost": 21
+  },
+  {
+    "word": "Gamma-Ray Burst",
+    "cost": 22
+  },
+  {
+    "word": "Human Spirit",
+    "cost": 23
+  },
+  {
+    "word": "Apocalyptic Meteor",
+    "cost": 24
+  },
+  {
+    "word": "Earth's Core",
+    "cost": 25
+  },
+  {
+    "word": "Neutron Star",
+    "cost": 26
+  },
+  {
+    "word": "Supermassive Black Hole",
+    "cost": 35
+  },
+  {
+    "word": "Entropy",
+    "cost": 45
+  }
+]

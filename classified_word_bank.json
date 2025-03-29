@@ -1,0 +1,434 @@
+[
+  {
+    "word": "Feather",
+    "categories": [
+      "StupidItems"
+    ],
+    "cost": 1
+  },
+  {
+    "word": "Coal",
+    "categories": [
+      "StupidItems"
+    ],
+    "cost": 1
+  },
+  {
+    "word": "Pebble",
+    "categories": [
+      "StupidItems"
+    ],
+    "cost": 1
+  },
+  {
+    "word": "Leaf",
+    "categories": [
+      "Nature",
+      "StupidItems"
+    ],
+    "cost": 2
+  },
+  {
+    "word": "Paper",
+    "categories": [
+      "StupidItems"
+    ],
+    "cost": 2
+  },
+  {
+    "word": "Rock",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 2
+  },
+  {
+    "word": "Water",
+    "categories": [
+      "Elements"
+    ],
+    "cost": 3
+  },
+  {
+    "word": "Twig",
+    "categories": [
+      "Nature",
+      "StupidItems"
+    ],
+    "cost": 3
+  },
+  {
+    "word": "Sword",
+    "categories": [
+      "Attack"
+    ],
+    "cost": 4
+  },
+  {
+    "word": "Shield",
+    "categories": [
+      "Defense"
+    ],
+    "cost": 4
+  },
+  {
+    "word": "Gun",
+    "categories": [
+      "Attack"
+    ],
+    "cost": 5
+  },
+  {
+    "word": "Flame",
+    "categories": [
+      "Elements",
+      "Attack"
+    ],
+    "cost": 5
+  },
+  {
+    "word": "Rope",
+    "categories": [
+      "StupidItems"
+    ],
+    "cost": 5
+  },
+  {
+    "word": "Disease",
+    "categories": [
+      "Disease"
+    ],
+    "cost": 6
+  },
+  {
+    "word": "Cure",
+    "categories": [
+      "Health"
+    ],
+    "cost": 6
+  },
+  {
+    "word": "Bacteria",
+    "categories": [
+      "Disease"
+    ],
+    "cost": 6
+  },
+  {
+    "word": "Shadow",
+    "categories": [
+      "Light/Dark"
+    ],
+    "cost": 7
+  },
+  {
+    "word": "Light",
+    "categories": [
+      "Light/Dark"
+    ],
+    "cost": 7
+  },
+  {
+    "word": "Virus",
+    "categories": [
+      "Disease"
+    ],
+    "cost": 7
+  },
+  {
+    "word": "Sound",
+    "categories": [
+      "Sound"
+    ],
+    "cost": 8
+  },
+  {
+    "word": "Time",
+    "categories": [
+      "Time/Space"
+    ],
+    "cost": 8
+  },
+  {
+    "word": "Fate",
+    "categories": [
+      "Emotion/Fate"
+    ],
+    "cost": 8
+  },
+  {
+    "word": "Earthquake",
+    "categories": [
+      "Disaster"
+    ],
+    "cost": 9
+  },
+  {
+    "word": "Storm",
+    "categories": [
+      "Disaster"
+    ],
+    "cost": 9
+  },
+  {
+    "word": "Vaccine",
+    "categories": [
+      "Health"
+    ],
+    "cost": 9
+  },
+  {
+    "word": "Logic",
+    "categories": [
+      "Science/Logic"
+    ],
+    "cost": 10
+  },
+  {
+    "word": "Gravity",
+    "categories": [
+      "Science/Logic"
+    ],
+    "cost": 10
+  },
+  {
+    "word": "Robots",
+    "categories": [
+      "Tech"
+    ],
+    "cost": 10
+  },
+  {
+    "word": "Stone",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 11
+  },
+  {
+    "word": "Echo",
+    "categories": [
+      "Sound"
+    ],
+    "cost": 11
+  },
+  {
+    "word": "Thunder",
+    "categories": [
+      "Elements",
+      "Sound"
+    ],
+    "cost": 12
+  },
+  {
+    "word": "Karma",
+    "categories": [
+      "Emotion/Fate"
+    ],
+    "cost": 12
+  },
+  {
+    "word": "Wind",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 13
+  },
+  {
+    "word": "Ice",
+    "categories": [
+      "Elements"
+    ],
+    "cost": 13
+  },
+  {
+    "word": "Sandstorm",
+    "categories": [
+      "Disaster"
+    ],
+    "cost": 13
+  },
+  {
+    "word": "Laser",
+    "categories": [
+      "Energy",
+      "Attack"
+    ],
+    "cost": 14
+  },
+  {
+    "word": "Magma",
+    "categories": [
+      "Energy"
+    ],
+    "cost": 14
+  },
+  {
+    "word": "Peace",
+    "categories": [
+      "Emotion/Fate"
+    ],
+    "cost": 14
+  },
+  {
+    "word": "Explosion",
+    "categories": [
+      "Disaster",
+      "Attack"
+    ],
+    "cost": 15
+  },
+  {
+    "word": "War",
+    "categories": [
+      "Attack"
+    ],
+    "cost": 15
+  },
+  {
+    "word": "Enlightenment",
+    "categories": [
+      "Emotion/Fate"
+    ],
+    "cost": 15
+  },
+  {
+    "word": "Nuclear Bomb",
+    "categories": [
+      "Disaster",
+      "Attack"
+    ],
+    "cost": 16
+  },
+  {
+    "word": "Volcano",
+    "categories": [
+      "Disaster",
+      "Nature"
+    ],
+    "cost": 16
+  },
+  {
+    "word": "Whale",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 17
+  },
+  {
+    "word": "Earth",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 17
+  },
+  {
+    "word": "Moon",
+    "categories": [
+      "Time/Space"
+    ],
+    "cost": 17
+  },
+  {
+    "word": "Star",
+    "categories": [
+      "Time/Space"
+    ],
+    "cost": 18
+  },
+  {
+    "word": "Tsunami",
+    "categories": [
+      "Disaster",
+      "Nature"
+    ],
+    "cost": 18
+  },
+  {
+    "word": "Supernova",
+    "categories": [
+      "Energy"
+    ],
+    "cost": 19
+  },
+  {
+    "word": "Antimatter",
+    "categories": [
+      "Energy"
+    ],
+    "cost": 19
+  },
+  {
+    "word": "Plague",
+    "categories": [
+      "Chaos/Entropy",
+      "Disease"
+    ],
+    "cost": 20
+  },
+  {
+    "word": "Rebirth",
+    "categories": [
+      "Health"
+    ],
+    "cost": 20
+  },
+  {
+    "word": "Tectonic Shift",
+    "categories": [
+      "Disaster"
+    ],
+    "cost": 21
+  },
+  {
+    "word": "Gamma-Ray Burst",
+    "categories": [
+      "Energy"
+    ],
+    "cost": 22
+  },
+  {
+    "word": "Human Spirit",
+    "categories": [
+      "Emotion/Fate"
+    ],
+    "cost": 23
+  },
+  {
+    "word": "Apocalyptic Meteor",
+    "categories": [
+      "Disaster",
+      "Chaos/Entropy"
+    ],
+    "cost": 24
+  },
+  {
+    "word": "Earth\u2019s Core",
+    "categories": [
+      "Nature"
+    ],
+    "cost": 25
+  },
+  {
+    "word": "Neutron Star",
+    "categories": [
+      "Time/Space"
+    ],
+    "cost": 26
+  },
+  {
+    "word": "Supermassive Black Hole",
+    "categories": [
+      "Time/Space",
+      "Disaster"
+    ],
+    "cost": 35
+  },
+  {
+    "word": "Entropy",
+    "categories": [
+      "Chaos/Entropy"
+    ],
+    "cost": 45
+  }
+]
