@@ -21,6 +21,21 @@ lemmatizer = WordNetLemmatizer()
 model = SentenceTransformer("all-mpnet-base-v2")
 knn = joblib.load("knn_classifier.joblib")
 
+specific_counters = {
+    "sword": "Shield", "axe": "Shield", "dagger": "Shield", "knife": "Shield",
+    "bow": "Shield", "gun": "Shield", "spear": "Shield", "crossbow": "Shield",
+    "katana": "Shield", "mace": "Shield", "club": "Shield", "pike": "Shield",
+    "lake": "Flame", "river": "Flame", "ocean": "Flame", "sea": "Flame",
+    "glass": "Pebble", "cup": "Pebble", "bowl": "Pebble", "plate": "Pebble",
+    "bottle": "Pebble", "vase": "Pebble", "jar": "Pebble", "flask": "Pebble",
+    "peace": "War", "calamity": "Peace", "device": "Water",
+    "celestial_body": "Earth’s Core", "weapon": "Shield", "pandemic":"Cure",
+    "virus":"Cure", "bacteria":"Cure", "disease":"Cure",
+    "infection":"Cure", "plague":"Cure", "epidemic":"Cure",
+    "Romania":"Explosion", "Bucharest":"Earthquake",
+    "Cluj":"Earthquake", "Timisoara":"Earthquake"
+}
+
 # === CATEGORY MAP ===
 category_map = {
     "entity": "Feather", "physical_entity": "Flame", "abstraction": "Logic", "group": "Peace",
@@ -47,7 +62,7 @@ for i, w in enumerate(word_bank, start=1):
 word_lookup = {w["word"].lower(): w for w in word_bank}
 category_cache = {}
 
-# === Optional manual input mapping ===
+# === Optional Manual Input Mapping ===
 try:
     with open("input_words.json") as f:
         input_words = json.load(f)
@@ -75,6 +90,7 @@ def get_category_from_wordnet(word):
                 return name
     return None
 
+
 # === KNN Classification ===
 def classify_with_knn(word):
     emb = model.encode(word)
@@ -98,6 +114,12 @@ def fallback_by_embedding(word):
 def get_counter_for(word):
     word = normalize_word(word)
 
+     # 0. Specific Manual Counter Overrides (highest priority)
+    if word in specific_counters:
+        counter = specific_counters[word]
+        print(f"[Specific Override] '{word}' manually set to counter '{counter}'")
+        return counter, word_data.get(counter, 999)
+    
     # 1. Manual Input Map
     if word in input_word_map:
         cat = input_word_map[word]

@@ -14,6 +14,21 @@ knn = joblib.load("knn_classifier.joblib")
 with open("classified_word_bank.json") as f:
     word_bank = json.load(f)
 
+specific_counters = {
+    "sword": "Shield", "axe": "Shield", "dagger": "Shield", "knife": "Shield",
+    "bow": "Shield", "gun": "Shield", "spear": "Shield", "crossbow": "Shield",
+    "katana": "Shield", "mace": "Shield", "club": "Shield", "pike": "Shield",
+    "lake": "Flame", "river": "Flame", "ocean": "Flame", "sea": "Flame",
+    "glass": "Pebble", "cup": "Pebble", "bowl": "Pebble", "plate": "Pebble",
+    "bottle": "Pebble", "vase": "Pebble", "jar": "Pebble", "flask": "Pebble",
+    "peace": "War", "calamity": "Peace", "device": "Water",
+    "celestial_body": "Earth’s Core", "weapon": "Shield", "pandemic":"Cure",
+    "virus":"Cure", "bacteria":"Cure", "disease":"Cure",
+    "infection":"Cure", "plague":"Cure", "epidemic":"Cure",
+    "Romania":"Explosion", "Bucharest":"Earthquake",
+    "Cluj":"Earthquake", "Timisoara":"Earthquake"
+}
+
 # === Counter Maps ===
 category_map = {
     "entity": "Feather",
@@ -29,7 +44,6 @@ category_map = {
     "act": "Logic",
     "event": "Peace",
     "state": "Peace",
-    "peace": "War",
     "feeling": "Logic",
     "location": "Earthquake",
     "substance": "Water",
@@ -43,7 +57,9 @@ category_map = {
     "calamity": "Peace",
     "device": "Water",
     "celestial_body": "Earth’s Core",
-    "weapon": "Shield"  # ✅ Custom counter for weapons
+    "weapon": "Shield",
+    "city": "Earthquake",
+    "town": "Earthquake"
 }
 
 word_data = {}
@@ -104,6 +120,13 @@ def fallback_by_embedding(word):
 def get_counter_for(word):
     word = normalize_word(word)
 
+      # 0. Specific Manual Counter Overrides (highest priority)
+    if word in specific_counters:
+        counter = specific_counters[word]
+        print(f"[Specific Override] '{word}' manually set to counter '{counter}'")
+        return counter, word_data.get(counter, 999)
+    
+    
     # 1. Manual Mapping
     if word in input_word_map:
         cat = input_word_map[word]
